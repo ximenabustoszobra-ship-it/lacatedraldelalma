@@ -1,0 +1,175 @@
+﻿<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>La Catedral del Alma</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --cream: #F8F4E6;
+      --ivory: #FFF7EC;
+      --white: #FFFFFF;
+      --gold: #D4A017;
+      --goldSoft: #E6C36B;
+      --greenSoft: #D8EAD9;
+      --taupe: #D0C6B5;
+      --text: #3a2b1a;
+      --bg: #ffffff;
+    }
+    *{box-sizing:border-box}
+    body{margin:0; font-family: 'Inter', system-ui, Arial, sans-serif; color:#333; background:var(--bg);}
+    a{text-decoration:none; color:inherit}
+    img{display:block; max-width:100%; height:auto}
+
+
+    /* Mobile-first: hero ocupa gran parte de la pantalla */
+    .hero{
+      position:relative;
+      min-height: 60vh;
+      background-image:url('imagen domoJPG_c34ee688-c2e0-4c9a-b196-aca9b389122a.JPG');
+      background-size:cover;
+      background-position:center;
+      display:flex; flex-direction:column; justify-content:center;
+      align-items:center; text-align:center;
+      color:#1a1a1a;
+      padding: 20px;
+    }
+    .hero::before{
+      content:"";
+      position:absolute; inset:0;
+      background: linear-gradient(to bottom, rgba(255,255,255,0) 40%, rgba(255,255,255,.92) 100%);
+      z-index:0;
+    }
+    .ada-photo{
+      position:absolute;
+      right: 12px;
+      top: 12px;
+      width: 110px; height: 110px;
+      border-radius:50%;
+      border: 4px solid #fff;
+      box-shadow: 0 6px 16px rgba(0,0,0,.25);
+      object-fit:cover;
+      z-index:1;
+      background:#eee;
+    }
+    .hero-content{position:relative; z-index:2; padding: 0 14px; max-width: 700px;}
+    h1{ font-family: 'Playfair Display', serif; font-size: 34px; line-height:1.1; margin:0 0 6px; color:var(--text);}
+    .lead{ font-size:16px; color:#3b3b3b; margin:0 0 14px;}
+    .cta{
+      display:inline-block;
+      padding:12px 22px;
+      border-radius:999px;
+      font-weight:700;
+      color:#fff;
+      background: linear-gradient(135deg, var(--gold), var(--goldSoft));
+      box-shadow: 0 6px 14px rgba(0,0,0,.08);
+    }
+
+
+    /* Secciones */
+    .container{ max-width: 1100px; margin: 0 auto; padding: 28px 16px; }
+    .section{ padding: 28px 0; border-top: 1px solid #f0e1c9; }
+    .section:first-of-type{ border-top: none; padding-top: 0; }
+
+
+    .section-title{ font-family: 'Playfair Display', serif; font-size: 24px; color: var(--text); margin:0 0 8px; }
+
+
+    .bullets{ display:flex; flex-direction:column; gap:10px; }
+    .bullet{ display:flex; align-items:flex-start; gap:10px; }
+    .bullet-icon{ width:22px; height:22px; border-radius:50%; background:var(--goldSoft); color:white; display:inline-flex; align-items:center; justify-content:center; font-size:12px; }
+
+
+    .gallery{ display:grid; grid-template-columns:1fr; gap:12px; }
+    .gallery img{ border-radius:12px; border:2px solid var(--gold); }
+
+
+    .details{ font-size:15px; color:#555; }
+
+
+    footer{ text-align:center; padding:20px; color:#666; font-size:14px; }
+
+
+    /* Breakpoint para escritorio: se adapta a dos columnas y más espacio */
+    @media (min-width: 900px){
+      .hero{ min-height: 70vh; }
+      .ada-photo{ width: 170px; height: 170px; right: 40px; top: 40px; }
+      .container{ padding: 40px 40px; }
+      .section{ padding: 40px 0; }
+      .two-col{ display:flex; gap:40px; align-items:flex-start; }
+      .gallery{ grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+
+  <!-- Hero con Ada en la esquina derecha -->
+  <header class="hero" aria-label="Hero La Catedral del Alma">
+    <img src="imagen_ada_4770c97c-64c6-4027-bedf-0d7a08c2e033.JPG" alt="Ada Della Porta" class="ada-photo" />
+    <div class="hero-content">
+      <h1>La Catedral del Alma</h1>
+      <p class="lead">Encuentro presencial de Regresión a Vidas Pasadas y Potenciación con Cámara Taquiónica</p>
+      <a class="cta" href="https://docs.google.com/forms/d/e/1FAIpQLSfOG27vNyFruyQagTA2TrKvH6gEr5v5niyWf5J788HOV7SJOg/viewform?usp=publish-editor" target="_blank" rel="noopener">Reserva tu plaza</a>
+    </div>
+  </header>
+
+
+  <!-- Acerca de la experiencia -->
+  <section class="section container" aria-label="Acerca de la experiencia">
+    <h2 class="section-title">Un viaje hacia el origen del alma</h2>
+    <p>Un espacio para explorar memorias del alma y reconectar con tu propósito. A través de una experiencia guiada, se abre la conciencia para reconocer patrones, liberar bloqueos energéticos y descubrir dones del alma.</p>
+  </section>
+
+
+  <!-- Beneficios / Impacto -->
+  <section class="section container" aria-label="Beneficios">
+    <h2 class="section-title">Beneficios e impacto (resumen)</h2>
+    <div class="bullets" aria-label="Beneficios breves">
+      <div class="bullet">
+        <span class="bullet-icon" aria-hidden="true">✦</span>
+        <span>Reconocer patrones y vínculos repetitivos</span>
+      </div>
+      <div class="bullet">
+        <span class="bullet-icon" aria-hidden="true">✦</span>
+        <span>Liberar bloqueos emocionales y energéticos</span>
+      </div>
+      <div class="bullet">
+        <span class="bullet-icon" aria-hidden="true">✦</span>
+        <span>Despertar talentos y dones del alma</span>
+      </div>
+      <div class="bullet">
+        <span class="bullet-icon" aria-hidden="true">✦</span>
+        <span>Reconectar con tu propósito espiritual</span>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Ambiente / Galería -->
+  <section class="section container" aria-label="Ambiente y experiencia">
+    <h2 class="section-title">Ambiente y experiencia</h2>
+    <div class="gallery" aria-label="Galería de imágenes">
+      <img src="imagen domoJPG_c34ee688-c2e0-4c9a-b196-aca9b389122a.JPG" alt="Interior del domo geodésico" />
+      <img src="ximena_taquiones_e70d63a4-6739-4a6d-9b08-95c35992ad87.jpeg" alt="Ximena, co-facilitadora" />
+    </div>
+  </section>
+
+
+  <!-- Detalles prácticos -->
+  <section class="section container" aria-label="Detalles prácticos">
+    <h2 class="section-title">Detalles prácticos</h2>
+    <p class="details">Fecha y lugar: Sábado 18 de julio, Escobar, Cámara Taquiónica. Horario: 14:00 a 19:00. Vestimenta cómoda y abierta a la experiencia.</p>
+  </section>
+
+
+  <!-- Pie de página -->
+  <footer aria-label="Contacto">
+    <p>Contacto: Ada Della Porta • Ximena Bustos</p>
+    <p>Enlace de registro: Reserva tu plaza en el hero</p>
+  </footer>
+
+
+</body>
+</html>
